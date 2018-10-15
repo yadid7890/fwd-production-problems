@@ -38,14 +38,12 @@ section
   flex: 1;
 }
 
-#three,
-#two,
-#one {
-
-}
-
 @media screen and (min-width: 600px) {
-
+ #content
+ {
+   display: flex;
+   flex-wrap: wrap;
+ }
 }
 
 @media screen and (min-width: 800px) {
@@ -58,5 +56,4 @@ section
   {
     flex: 1;
   }
-
 }
