@@ -28,7 +28,14 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* ==== LAYOUT STYLES ==== */
 #content {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 50vh;
+}
 
+section
+{
+  flex: 1;
 }
 
 #three,
