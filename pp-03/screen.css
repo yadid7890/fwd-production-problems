@@ -49,5 +49,14 @@ section
 }
 
 @media screen and (min-width: 800px) {
+  #content {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+  }
+  section
+  {
+    flex: 1;
+  }
 
 }
