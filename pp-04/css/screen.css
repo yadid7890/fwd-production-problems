@@ -19,7 +19,10 @@ body {
 }
 
 /* ===== LAYOUT STYLES ===== */
-
+.bell:hover {
+  background: black;
+  color: white;
+}
 
 /* ===== MODULAR STYLES ===== */
 
