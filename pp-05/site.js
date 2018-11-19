@@ -1,15 +1,15 @@
 //  1. Correct the variable scope so that the console.log call
 //  outputs the correct value for x (5) even after double(6) is
 //  called:
+"use strictmode";
 
 var x = 5;
 
 function double(num) {
-  x = num * 2;
-  return x;
-}
+  return num * 2;
+};
 
-double(6);
+console.log(double(6));
 console.log('The value of x is:', x, 'It should be 5.');
 
 //  2. Rewrite the corrected JavaScript above as a self-executing
@@ -23,7 +23,7 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  the global scope:
 
 function arrayEach(array, func) {
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     func(array[i]);
   }
 }
@@ -31,6 +31,7 @@ function arrayEach(array, func) {
 arrayEach(['red','green','blue'], console.log);
 
 console.log(i) // should be 'undefined', not 3
+
 
 //  4. Explain why this function does not modify the global
 //  variable x declared on line 5 above. Write your explanation
@@ -43,3 +44,7 @@ function addTwo(x) {
 
 console.log(addTwo(4)); // 6
 console.log(x); // should be 5 if you corrected the double() function above
+//It doesnt modify the x from line five because the function has its own
+//x in its local environment (addTwo(x)). The function requires an input
+//declared as x, since it's in its local environment, the method calls upon
+//that x, rather than the global one.
